@@ -1,0 +1,81 @@
+.contributions__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contribution-item {
+  display: flex;
+  gap: var(--space-6);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.contributions__list--visible .contribution-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Timeline marker */
+.contribution-item__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  padding-top: 6px;
+}
+
+.contribution-item__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary-light);
+  flex-shrink: 0;
+}
+
+.contribution-item:nth-child(even) .contribution-item__dot {
+  background-color: var(--color-teal);
+  border-color: var(--color-teal-light);
+}
+
+.contribution-item__line {
+  width: 1px;
+  flex: 1;
+  min-height: 24px;
+  background-color: var(--color-border);
+}
+
+/* Content */
+.contribution-item__content {
+  padding-bottom: var(--space-8);
+}
+
+.contribution-item:last-child .contribution-item__content {
+  padding-bottom: 0;
+}
+
+.contribution-item__title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.contribution-item__description {
+  font-size: var(--font-size-sm);
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  max-width: 560px;
+}
+
+@media (max-width: 480px) {
+  .contribution-item {
+    gap: var(--space-4);
+  }
+
+  .contribution-item__content {
+    padding-bottom: var(--space-6);
+  }
+}
