@@ -6,7 +6,7 @@ Since the main application is built for Android, this website provides a dedicat
 
 ## Live Demo
 
-Website: [Add Netlify deployment URL after deployment]
+Website: [https://raktasevaconnect.netlify.app/](https://raktasevaconnect.netlify.app/)
 
 ## What's Included
 
